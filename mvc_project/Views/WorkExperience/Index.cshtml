@@ -1,0 +1,37 @@
+﻿@model List<mvc_project.Services.Experience>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Work Experience</h2>
+<div class="row gap-5">
+@foreach (var exp in Model)
+{
+    <div class="shadow-lg rounded p-4 bg-white" style="width: 30%">
+        <h5>@exp.Title - @exp.Company</h5>
+        <p><strong>@exp.Start_Date</strong> - <strong>@exp.End_Date</strong></p>
+
+        @if (exp.Responsibilities != null && exp.Responsibilities.Any())
+        {
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                @foreach (var task in exp.Responsibilities)
+                {
+                    <li>@task</li>
+                }
+            </ul>
+        }
+
+        @if (exp.Tech_Used != null)
+        {<div class="row gap-3">
+            @foreach (var tech in exp.Tech_Used)
+            {
+                <span class="rounded-2 p-2 col-3 shadow-sm text-nowrap text-center" style="font-size: smaller"> @tech</span>
+            }
+        </div>
+        }
+    </div>
+}
+</div>

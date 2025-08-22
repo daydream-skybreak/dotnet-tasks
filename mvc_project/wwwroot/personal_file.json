@@ -1,0 +1,147 @@
+﻿{
+  "personal_details": {
+    "name": "ADONAY DESTA",
+    "title": "Software Engineer | Data Analyst",
+    "email": "samueldesta323@gmail.com",
+    "phone": "+251-968-571911",
+    "location": "Addis Ababa, Ethiopia",
+    "linkedin": null,
+    "github": null
+  },
+  "summary": "A Computer Science graduate with a strong academic record, achieving a GPA of Great Distinction. Experienced in freelance work, demonstrating dedication and a strong work ethic. Proficient in programming with hands-on experience from rigorous personal and academic courses, including a challenging Software Engineering course. Committed to continuous learning and excellence in the tech industry.",
+  "experience": [
+    {
+      "title": "C# DEVELOPER TRAINEE (VOLUNTEER)",
+      "company": "Bincom Global",
+      "start_date": "July 2025",
+      "end_date": "Present",
+      "tech_used": ["ASP.NET"]
+    },
+    {
+      "title": "SOFTWARE ENGINEER AND DATA ANALYST",
+      "company": "HABTech Solutions",
+      "start_date": "January 2025",
+      "end_date": "Present",
+      "responsibilities": [
+        "Development and implementation of analytical dashboards providing key performance indicators to health centers and administrators nationwide.",
+        "Implemented data validation and cleansing procedures to prevent inconsistencies and ensure the reliability of analytical results.",
+        "Development of robust, scalable systems from start to finish.",
+        "Maintain software updates in an Agile environment."
+      ],
+      "tech_used": [
+        "Spring Boot",
+        "PowerBI",
+        "Django",
+        "Figma",
+        "TailwindCSS"
+      ]
+    },
+    {
+      "title": "DATA ANALYTICS INTERN",
+      "company": "HABTech Solutions",
+      "start_date": "October 2024",
+      "end_date": "January 2025",
+      "responsibilities": [
+        "Developed and implemented an analytical dashboard providing key performance indicators to health centers and administrators nationwide.",
+        "Implemented data validation and cleansing procedures to prevent inconsistencies and ensure the reliability of analytical results."
+      ],
+      "tech_used": ["PowerBI"]
+    },
+    {
+      "title": "FRONT-END DEVELOPER",
+      "company": "Trident Creative Studios",
+      "start_date": "September 2024",
+      "end_date": "October 2024",
+      "responsibilities": [
+        "Handled the full-stack development of a company website using Next.js, from initial design to deployment and maintenance.",
+        "Developed a contact us page that sends email to the company with the message of the customers.",
+        "Leveraged NextJS and Tailwind CSS to build performant and maintainable front-end interfaces."
+      ],
+      "tech_used": ["NextJS", "TailwindCSS"]
+    },
+    {
+      "title": "FRONT-END DEVELOPER (FREELANCE)",
+      "company": "Private Client",
+      "start_date": "January 2024",
+      "end_date": "February 2024",
+      "responsibilities": [
+        "Translated detailed Figma prototypes into responsive, cross-device compatible web applications, prioritizing optimal mobile performance.",
+        "Developed the website for easy integration, allowing seamless integration with backend services and third-party APIs.",
+        "Leveraged ReactJS and Tailwind CSS to build performant and maintainable front-end interfaces."
+      ],
+      "tech_used": ["ReactJS", "TailwindCSS"]
+    },
+    {
+      "title": "BACK-END DEVELOPER (INTERN)",
+      "company": "JSI, Ethiopia",
+      "start_date": "July 2023",
+      "end_date": "August 2023",
+      "responsibilities": [
+        "Engineered a comprehensive user management system capable of handling 10,000+ active users simultaneously.",
+        "Enhanced data security protocols that improved user data protection standards and ensured compliance with industry regulations.",
+        "Implemented key functionalities within the company's ERP system that streamlined data entry processes, resulting in a significant reduction in time spent on manual entries by team members."
+      ],
+      "tech_used": [
+        "ExpressJS",
+        "NodeJS"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BSc in Computer Science",
+      "school": "Hawassa University",
+      "start_year": "2021",
+      "end_year": "2024",
+      "grade": "Great Distinction (3.81)"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Software Engineering",
+      "organization": "ALX"
+    }
+  ],
+  "skills": {
+    "programming_languages": [
+      "Javascript/Typescript",
+      "Python",
+      "Java"
+    ],
+    "frontend": [
+      "ReactJS",
+      "NextJS",
+      "TailwindCSS",
+      "Redux"
+    ],
+    "backend": [
+      "Springboot",
+      "NodeJS",
+      "NestJS",
+      "ExpressJS",
+      "Django",
+      "Flask",
+      "Firebase"
+    ],
+    "database": [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB"
+    ],
+    "version_control": [
+      "Git"
+    ],
+    "containerization": [
+      "Docker"
+    ],
+    "soft_skills": [
+      "Communication",
+      "Quick Learner",
+      "Dedication",
+      "Team work",
+      "Timeliness",
+      "Reliable",
+      "Open to feedback"
+    ]
+  }
+}
