@@ -1,8 +1,29 @@
-﻿@{
+﻿@model mvc_project.Services.JsonDataService
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-start">
+    <h1 class="display-4">@Model.GetPersonalDetails().Name</h1>
+    <h4>@Model.GetPersonalDetails().Title</h4>
 </div>
+
+<script>
+    const cursor = document.getElementById('cursor');
+    setInterval(() => {
+        cursor.classList.contains("hidden") ? cursor.classList.remove("hidden") : cursor.classList.add("hidden") ;
+    })
+    
+    const typeName = (name) => {
+        console.log(name);
+        const typeSpeed = 500;
+        console.log(name.length);
+        for (let i=0; i < name.length; i++) {
+            setTimeout(() => {
+                console.log(name[i])
+                document.getElementById("typedName").innerHTML = document.getElementById("typedName").innerHTML + name[i];
+            }, typeSpeed )
+        }
+    } 
+    typeName("Adonay Desta")
+</script>
