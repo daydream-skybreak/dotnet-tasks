@@ -9,4 +9,5 @@ public class PersonalDetails
     public string Location { get; set; }
     public string Linkedin { get; set; }
     public string Github { get; set; }
+    public string Summary { get; set; }
 }

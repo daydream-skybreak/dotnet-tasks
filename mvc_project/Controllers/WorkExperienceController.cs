@@ -14,7 +14,12 @@ public class WorkExperienceController : Controller
     // GET
     public IActionResult Index()
     {
-        List<Experience> experiences = _dataService.GetExperiences();
+        var experiences = _dataService.GetExperiences();
         return View(experiences);
+    }
+
+    public IActionResult Details(int id)
+    {
+        return View();
     }
 }
