@@ -6,32 +6,31 @@
 }
 
 <h2>Work Experience</h2>
-<div class="row gap-5">
+<div class="column">
 @foreach (var exp in Model)
 {
-    <div class="shadow-lg rounded p-4 bg-white" style="width: 30%">
-        <h5>@exp.Title - @exp.Company</h5>
-        <p><strong>@exp.Start_Date</strong> - <strong>@exp.End_Date</strong></p>
-
-        @if (exp.Responsibilities != null && exp.Responsibilities.Any())
-        {
-            <p><strong>Responsibilities:</strong></p>
-            <ul>
-                @foreach (var task in exp.Responsibilities)
-                {
-                    <li>@task</li>
-                }
-            </ul>
-        }
-
-        @if (exp.Tech_Used != null)
-        {<div class="row gap-3">
-            @foreach (var tech in exp.Tech_Used)
-            {
-                <span class="rounded-2 p-2 col-3 shadow-sm text-nowrap text-center" style="font-size: smaller"> @tech</span>
-            }
+    <div class="rounded p-3 bg-white w-100 mb-4 d-flex flex-row justify-content-between gap-4" style="border: 1px solid #8d8d8d;">
+        <div class="flex-grow-1 w-50">
+            <h5>@exp.Title - @exp.Company</h5>
+            <p><strong>@exp.Start_Date</strong> - <strong>@exp.End_Date</strong></p>
         </div>
-        }
+        <div class="flex-grow-1 d-flex flex-column justify-content-between h-full" style="width: 30%;">
+            <div style="overflow-x: scroll">
+                @foreach (var tech in exp.Tech_Used)
+                {
+                    <span class="rounded-2 p-2 col-3 shadow-sm text-nowrap text-center fw-bold" style="font-size: smaller; background-color: #053d8e; color: white;"> @tech</span>
+                }
+                
+            </div>
+            <button class="w-auto">
+                <span>
+                    Click here for more &RightArrow;
+                </span>
+            </button>
+        </div>
+        
+
+      
     </div>
 }
 </div>
