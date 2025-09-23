@@ -1,13 +1,12 @@
 ﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace mvc_project.Models;
 
 public class Photo
 {
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string? Id { get; set; }
+    [Key]
+    public int? Id { get; set; }
     
-    private string path { get; set; }
+    public string path { get; set; }
 }

@@ -20,3 +20,35 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#drop-area {
+    border: 2px dashed #6c63ff;
+    border-radius: 10px;
+    width: 80%;
+    height: 65%;
+    padding: 20px;
+    text-align: center;
+    background: black;
+    transition: background 0.3s;
+    color: #dddddd;
+    z-index: 20;
+    font-weight: bold;
+    font-family: 'Verdana', sans-serif;
+}
+
+#drop-area:hover {
+    cursor: pointer;
+    
+}
+#submit-button {
+    background-color: #0332aa;
+    padding:4px 8px;
+    border-radius: 5px;
+    color: white;
+}
+
+#photo-addition-enable-button:hover{
+    cursor: pointer;
+    border: 2px solid #0a58ca;
+    scale: 105%;
+}

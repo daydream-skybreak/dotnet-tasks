@@ -1,8 +1,16 @@
 using mvc_project.Services;
+using DotNetEnv;
+using Microsoft.EntityFrameworkCore;
+using mvc_project;
 
+Env.Load();
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var connectionString = Environment.GetEnvironmentVariable("POSTGRES_CONNECTION");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(connectionString));
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<JsonDataService>();
 var app = builder.Build();
