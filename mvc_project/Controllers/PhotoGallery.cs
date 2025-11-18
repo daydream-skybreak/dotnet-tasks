@@ -22,12 +22,13 @@ public class PhotoGalleryController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> UploadPhoto(IFormFile? file)
+    public async Task<IActionResult> Index(IFormFile? file)
     {
         Console.WriteLine("form successfully submitted");
+        Console.WriteLine($"file: {file}");
         if (file is null || file.Length == 0) return BadRequest();
         
-        var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images");
+        var path = Path.Combine("images");
         
         if (!Directory.Exists(path)) Directory.CreateDirectory(path);
         
@@ -35,7 +36,6 @@ public class PhotoGalleryController : Controller
         var uploadPath = Path.Combine(path, fileName);
         await using var stream = new FileStream(uploadPath, FileMode.Create);  
         await file.CopyToAsync(stream);
-
         var photo = new Photo
         {
             path = uploadPath,
@@ -44,6 +44,6 @@ public class PhotoGalleryController : Controller
         await _db.SaveChangesAsync();
         
         
-        return RedirectToAction("Index");    
+        return Redirect($"PhotoGallery/Index/");    
     }
 }

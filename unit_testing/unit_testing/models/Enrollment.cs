@@ -1,0 +1,9 @@
+﻿namespace unit_testing.models;
+
+public class Enrollment
+{
+    public int StudentId { get; set; }
+    public int CourseId { get; set; }
+    public DateTime EnrollmentDate { get; set; }
+    public double Grade { get; set; }
+}

@@ -1,10 +1,11 @@
-﻿using System.Text.Json;
+﻿using System.Runtime.InteropServices.JavaScript;
+using System.Text.Json;
 
 namespace mvc_project.Services;
 
 public class JsonDataService
 {
-    private readonly RootData _rootData;
+    private static readonly RootData _rootData;
 
     public JsonDataService(IWebHostEnvironment env)
     {
@@ -17,7 +18,30 @@ public class JsonDataService
     }
 
     public PersonalDetails GetPersonalDetails() => _rootData.Personal_Details;
+
+    public bool UpdatePersonalDetails(Dictionary<string, string> personalDetails)
+    {
+        try {
+            foreach (var kpv in personalDetails)
+            {
+                _rootData.Personal_Details[kpv.Key] = kpv.Value;
+            }
+            _rootData.Personal_Details = personalDetails;
+            return true;
+        } catch {
+            return false;
+        }
+    }
+    
     public string GetSummary() => _rootData.Summary;
+    public bool UpdateSummary(string summary) {
+        try {
+            _rootData.Summary = summary;
+            return true;
+        } catch {
+            return false;
+        }
+    }
     public List<Experience> GetExperiences() => _rootData.Experience;
     public List<Education> GetEducation() => _rootData.Education;
     public List<Certification> GetCertifications() => _rootData.Certifications;

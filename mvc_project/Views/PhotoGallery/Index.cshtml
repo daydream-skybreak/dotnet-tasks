@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<mvc_project.Models.Photo>
-
 <h2>Photo Gallery</h2>
 
 @foreach (var photo in Model)
@@ -22,12 +21,12 @@
             &times;
         </div>
 
-        <form style="width: 100%; height:85%; display: flex; justify-content: space-evenly; align-items: center; flex-direction: column; gap: 5px;" action="/PhotoGallery/UploadPhoto">
+        <form id="upload-form" style="width: 100%; height:85%; display: flex; justify-content: space-evenly; align-items: center; flex-direction: column; gap: 5px;" enctype="multipart/form-data" method="post">
         
             <!-- Custom Drop Area -->
-            <div id="drop-area" onclick="document.getElementById('fileInput').click()">
+            <div id="drop-area">
                 <span id="placeholder">Drag and drop your pictures here<br>or click the area to upload image</span>
-                <input id="fileInput" type="file" style="width: 100%; height: 100%;" onchange="showFileName(event)">
+                <input id="fileInput" type="file" style="width: 100%; height: 100%;" name="file" onchange="showFileName(event)">
                 <div id="fileName" style="display: none;"></div>
             </div>
             <button type="submit" id="submit-button">Submit</button>
@@ -39,5 +38,8 @@
     function togglePhotoAdditionModal () {
         const photoAdditionModal = document.getElementById('photo-addition-modal');
         photoAdditionModal.classList.contains('visually-hidden') ? photoAdditionModal.classList.remove('visually-hidden') :photoAdditionModal.classList.add('visually-hidden');
+    }
+    function submitPhoto() {
+        
     }
 </script>
