@@ -45,7 +45,7 @@ public class AuthController : Controller
         return CreatedAtAction(nameof(Signup), new {
             id = result.User!.Id,
             email = result.User.Email,
-            role = result.User.Role.ToString()
+            role = result.User.Role.ToString() ?? nameof(RoleEnum.Member)
         });
     }
 }

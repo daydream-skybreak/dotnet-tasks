@@ -15,6 +15,6 @@ public class SignupDTO
     [Required]
     public string Password { get; set; } = string.Empty;
 
-    public RoleEnum? Role { get; set; }
+    public RoleEnum? Role { get; set; } = RoleEnum.Member;
 }
 

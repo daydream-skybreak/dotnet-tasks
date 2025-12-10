@@ -17,14 +17,14 @@ public class BookController: ControllerBase
         _bookRepository = bookRepository;
     }
     
-    [Authorize(Roles = "User, Admin")]
+    [Authorize(Roles = "Member, Admin")]
     [HttpGet("get-all-books")]
     public async Task<IActionResult> GetAllBooks()
     {
         var result = await _bookRepository.GetAllBooksAsync();
         return Ok(result);
     }
-    [Authorize(Roles = "User, Admin")]
+    [Authorize(Roles = "Member, Admin")]
     [HttpGet("get-book-by-id/{id}")]
     public async Task<IActionResult> GetBookById(int id)
     {
@@ -36,7 +36,7 @@ public class BookController: ControllerBase
         return Ok(result);
     }
 
-    [Authorize(Roles = "User, Admin")]
+    [Authorize(Roles = "Member, Admin")]
     [HttpGet("get-book-by-author")]
     public async Task<IActionResult> GetBookByAuthor()
     {
